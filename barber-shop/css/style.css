@@ -1,0 +1,409 @@
+:root {
+    --color1: #917758;
+    --color2: #3c2915;
+    --color3: #f5eee6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    width: 1080px;
+    margin: 0 auto;
+}
+/*********************
+ HOME 
+*********************/
+
+.home .header {
+    padding: 30px 0;
+}
+.home {
+    background-image: url(../images/bg-home.jpg);
+    background-size: cover;
+    height: 100vh;
+    position: relative; /*Para minha div ser relativa ao section*/
+    background-attachment: fixed;
+}
+
+.home .header .nav {
+    display: flex;
+    justify-content: center;
+}
+
+.home .header .nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.home .header .nav ul li {
+     display: flex;
+     align-items: center;
+     width: 120px;
+     justify-content: center;
+}
+
+.home .header .nav ul li a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 15px;
+    font-weight: bold;
+    font-size: 12px;
+}   
+
+.home .header .nav ul li a:hover {
+    border-bottom: 2px solid var(--color1);
+    color: var(--color1);
+    
+}
+
+/*********************
+ HOME BANNER
+*********************/
+
+.home .conthome {
+   text-align: center;
+   position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 220px;
+    width: 640px;
+    margin-left: -320px;
+    margin-top: -50px;
+}
+
+.home .conthome .span1 { 
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--color1);
+    font-size: 13px;
+}
+
+ .home .conthome h1{
+    font-size: 100px;
+}
+
+.home .conthome .span2 {
+    display: block;
+    margin-bottom: 20px;
+}
+
+/*****
+Sobre
+******/
+
+.sobre{
+    background: var(--color1);
+}
+
+.sobre .container{
+    display: flex;
+}
+
+.sobre .timing{
+    position: relative; /*Tag para fazer o "sobre" ficar por cima do "home"*/
+    top:-36px;
+    width: 33%;
+    padding: 18px;
+    background-image: url(../images/brush-big.jpg);
+}
+
+.sobre .timing .transborda{
+    background-color: rgba(0, 0, 0, 0.7);
+    text-align: center; /*Deixar todo o texto dentro da div alinhado*/
+    padding: 45px 20px;
+}
+
+.sobre .timing .transborda .icon-cut{
+    width: 50px;
+}
+
+.sobre .timing .transborda h5{
+    color: var(--color1);
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--color1);
+    width: fit-content; /*Coloca a border do tamanho do h5*/
+    margin: 0 auto 30px auto; /*Necessário. O fit content deixa o texto fora de centro*/
+    font-size: 30px;
+}
+
+.sobre .timing .text{  /*Espaçando elementos*/
+    margin: 10px 0;
+}
+
+.sobre .timing .text:after{
+    content: "•";
+    display: block; /*Regra obrigatória no after*/
+    font-size: 25   px;
+    margin-top: 10px;
+}
+
+.sobre .timing .text:last-of-type:after{ /*Pegando a última div igual e mudando o content*/
+    content: "|";
+}
+
+.sobre .timing .text h6{
+    color: gray;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.sobre .timing span{
+    color: white;
+    font-size: 15px;
+    display: block;
+}
+.sobre .exp{
+    width: 66%;
+    margin-left: 7%;
+    margin-top: 100px;
+}
+
+.sobre .exp h2{
+    font-weight: 100;
+    font-size: 40px;
+}
+
+.sobre .exp h2:after{
+    display: block;
+    content: '';
+    width: 100px;
+    height: 3px;
+    background-color: #a38f78;
+    margin: 20px 0;
+}
+
+.sobre .exp .text{
+    display: flex;
+    justify-content: space-between;
+}
+
+.sobre .exp .text p{
+    margin-bottom: 20px;
+    font-weight: 100;
+    font-size: 15px;
+}
+
+/*******
+Serviços
+********/
+
+.servicos{
+    padding: 50px 0;
+    text-align: center;
+    background-color: var(--color3);
+}
+
+.servicos h2{
+    color: var(--color2);
+    font-weight: 100;
+    font-size: 50px;
+}
+
+.servicos .boxes{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.servicos .boxe{
+    border: 3px solid var(--color1);
+    padding: 40px 30px;
+    margin: 30px;
+}
+
+.servicos .boxe h4{
+    color: var(--color2);
+}
+
+.servicos .boxe p{
+    color: var(--color2);
+    font-size: 14px;
+    line-height: 26px;
+}
+
+/*******
+Agenda
+********/
+
+.agenda{
+    padding: 100px 0;
+    background-color: var(--color1);
+    background-image: url(../images/chair-ic.png);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: 290px;
+    height: 100vh;
+}
+
+.agenda h2{
+    color: var(--color3);
+    font-weight: 100;
+    font-size: 50px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.agenda img{
+    margin: 0 auto;/*Para centralizar*/
+    display: block;/*por padrão inline.. Block para o margin funcionar*/
+}
+
+.agenda form{
+    margin-top: 80px;
+}
+
+.agenda .paraflex{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.agenda .datagen{
+    width: 100%;
+    margin-right: 50px;
+}
+
+.agenda .datagen:last-of-type{
+    margin-right: 0;
+}
+
+.agenda .paraflex input,
+.agenda .paraflex select,
+.agenda textarea{
+    padding: 10px;
+    outline: none;
+    border: none;
+    width: 100%;
+    border-radius: 2px;
+}
+
+.agenda label{
+    display: block;
+    font-size: 14px;
+    margin-bottom: 3px;
+    color: var(--color3);
+}
+
+.agenda textarea{
+    height: 100px;
+}
+
+.agenda button{
+    background-color: var(--color2);
+    color: var(--color3);
+    padding: 13px 23px;
+    border: none;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+/*******
+Galeria
+********/
+
+.galeria{
+    padding: 100px 0;
+    background-color: var(--color3);
+}
+
+.galeria h2{
+    color: var(--color2);
+    font-weight: 400;
+    font-size: 50px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.galeria img{
+    margin: 0 auto;
+    display: block;
+}
+
+.galeria .galimagens{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 860px;
+    flex-wrap: wrap;
+    margin: 50px auto;
+}
+
+.galeria .galimagens div{
+    border: 10px solid var(--color1);
+    margin: 6px;
+    width: 33%;
+}
+
+.galeria .galimagens div img{
+    width: 100%;
+}
+
+/*******
+location
+********/
+
+.location{
+    padding: 100px;
+    background-image: url(../images/bg-location.jpg); 
+    background-size: cover;
+}
+
+.location .head{
+    display: flex;
+    justify-content: space-between;
+    background-color: #191919;
+    padding: 20px;
+    width: 100%;
+}
+
+.location .head .info{
+    display: flex;
+    align-items: center;
+}
+
+.location .head .info .icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    margin-right: 16px;
+    border: 1px solid var(--color1);
+    border-radius: 100%;
+    padding: 10px;
+}
+
+.location .head .info .text span{
+    display: block;
+    font-size: 13px;
+}
+
+.location .head .info .text span:first-child{
+    color: silver;
+}
+
+.location .map{
+    width: 100%;
+}
+
+.location .map iframe{
+    width: 100%;
+}
+
+.footer{
+    background-color: #191919;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
